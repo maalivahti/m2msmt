@@ -1,0 +1,152 @@
+.btn {
+  padding: 8px 15px;
+  background: $--color-silver;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  color: $--color-jet;
+}
+
+.btn--submit {
+  color: $--color-white;
+  background: $--color-glaucous;
+}
+
+.gen-label {
+  &::before {
+    content: "";
+    display: block;
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    background-image: url("../images/check_off.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    transition: background-image 0.1s linear;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.gen-label--group:before {
+  background-image: url("../images/check_minus.svg");
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.work-area {
+  width: 400px;
+}
+
+.gen-check {
+  position: absolute;
+  appearance: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-ai-c {
+  display: flex;
+  align-items: center;
+}
+
+.flex-c-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gen-check:checked + .gen-label::before {
+  background-image: url("../images/check_on.svg");
+  transition: background-image 0.1s linear;
+}
+
+.gen-check--group:checked + .gen-label--group::before {
+  background-image: url("../images/check_pluse.svg");
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: .7;
+  transition: all 200ms linear;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 1;
+    transition: all 200ms linear;
+  }
+}
+
+.icon--toGroup {
+  background-image: url("../images/group_btn.svg");
+}
+
+.icon--toObj {
+  background-image: url("../images/obj_btn.svg");
+}
+
+.icon--add-elem {
+  background-image: url("../images/add_elem.svg");
+}
+
+.icon--more {
+  background-image: url("../images/more.svg");
+}
+
+.icon--sett {
+  background-image: url("../images/tools.svg");
+}
+
+.icon--remove {
+  background-image: url("../images/cross.svg");
+}
+
+.icon--speed {
+  background-image: url("../images/speed.svg");
+}
+
+.icon--clock {
+  background-image: url("../images/clock.svg");
+}
+
+.icon--road {
+  background-image: url("../images/road-obj.svg");
+}
+
+.icon--satellite {
+  background-image: url("../images/satellite-obj.svg");
+}
+
+.icon--target {
+  background-image: url("../images/target.svg");
+}
+
+.mb5 {
+  margin-bottom: 5px !important;
+}
+
+.mb10 {
+  margin-bottom: 10px !important;
+}
+
+.mb15 {
+  margin-bottom: 15px !important;
+}
+
+.pointer {
+  cursor: pointer;
+}

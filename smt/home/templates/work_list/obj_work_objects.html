@@ -1,0 +1,20 @@
+{% load static %}
+<ul class="work-list__list obj__list">
+  {% for obj in obj_list %}
+    <li class="work-list__item obj__item" data-value="obj_{{ obj.id }}">
+      <input type="checkbox" id="obj_{{ obj.id }}" class="gen-check obj-show-map"/>
+      <label for="obj_{{ obj.id }}" class="gen-label work-list__check"></label>
+
+      <img src="{{obj.icon}}" alt="" class="obj-icon">
+
+      <p class="work-list__obj-name obj__name">{{ obj.name }}</p>
+
+      <div class="icon icon--more work-icon--more "></div>
+      <div class="icon icon--sett work-icon--sett"></div>
+      <div class="icon icon--remove work-icon--remove"></div>
+    </li>
+    <li class="is-hidden">
+    {% include "work_list/obj_info.html" %}
+    </li>
+  {% endfor %}
+</ul>

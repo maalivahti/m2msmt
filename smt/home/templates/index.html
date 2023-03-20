@@ -1,0 +1,29 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>M2MSMT</title>
+  <link rel="stylesheet" href="{% static 'dist/styles/main.min.css' %}">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+  <script src="{% static 'dist/js/main.js' %}" defer></script>
+</head>
+<body>
+<div class="site-container">
+  {% include "header/header.html" %}
+  <main class="main">
+    <section class="work-area" id="work_area">
+      {% include "work_list/obj_work_list.html" %}
+    </section>
+    <section class="content">
+      <div class="map" id="map"></div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,6 @@
+.idea
+/node_modules/
+/smt_venv/
+smt/*/migrations/
+smt/static/dist
+*.map

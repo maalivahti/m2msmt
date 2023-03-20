@@ -1,0 +1,36 @@
+{% load static %}
+<ul class="work-list__list group-list is-hidden">
+  <li class="work-list__item group-list__item">
+    <div class="group-list__row">
+      <input type="checkbox" id="group_{{ obj.id }}" class="gen-check gen-check--group"/>
+      <label for="group_{{ obj.id }}" class="gen-label gen-label--group"></label>
+
+      <input type="checkbox" id="obj_{{ obj.id }}" class="gen-check"/>
+      <label for="obj_{{ obj.id }}" class="gen-label work-list__check"></label>
+
+      <img src="{% static 'dist/images/car.png' %}" alt="" class="obj-icon">
+
+      <p class="work-list__obj-name obj__name">Легковые авто</p>
+
+      <div class="work-icon work-icon--sett icon--sett"></div>
+      <div class="work-icon work-icon--remove icon--remove"></div>
+    </div>
+
+    <ul class="work-list__list obj__list group-list__list is-hidden">
+      {% for obj in obj_list %}
+        <li class="work-list__item obj__item" data-value="obj_{{ obj.id }}">
+          <input type="checkbox" id="group_{{ obj.id }}" class="gen-check obj-show-map"/>
+          <label for="group_{{ obj.id }}" class="gen-label work-list__check"></label>
+
+          <img src="{% static 'dist/images/car.png' %}" alt="" class="obj-icon">
+
+          <p class="work-list__obj-name obj__name">{{ obj.name }}</p>
+
+          <div class="work-icon work-icon--more icon--more"></div>
+          <div class="work-icon work-icon--sett icon--sett"></div>
+          <div class="work-icon work-icon--remove icon--remove"></div>
+        </li>
+      {% endfor %}
+    </ul>
+  </li>
+</ul>

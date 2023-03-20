@@ -1,0 +1,66 @@
+{% load static %}
+<article class="track">
+  <ul class="track__sett track-sett">
+    <li class="track-sett__item">
+      <label for="" class="track-sett__label">Объект:</label>
+      <select name="track-obj" id="track_obj" class="select main-select track-sett__select">
+        {% for obj in obj_list %}
+          <option value="{{ obj.id }}">{{ obj.name }}</option>
+        {% endfor %}
+      </select>
+    </li>
+
+    <li class="track-sett__item">
+      <label for="" class="track-sett__label">Тип трека:</label>
+      <select name="track-type" id="track_type" class="select main-select track-sett__select" disabled>
+        <option value="">По цвету</option>
+        <option value="">По поездкам</option>
+        <option value="">По скорости</option>
+      </select>
+    </li>
+
+    <li class="track-sett__item">
+      <span class="track-sett__label">Цвет:</span>
+      <ul class="track-set__color-list">
+        <li class="track-set__color-item track-set__color-item--active" style="background-color: #50b953"></li>
+        <li class="track-set__color-item" style="background-color: #54d6ff"></li>
+        <li class="track-set__color-item" style="background-color: #5081ba"></li>
+        <li class="track-set__color-item" style="background-color: #284669"></li>
+        <li class="track-set__color-item" style="background-color: #b04fde"></li>
+        <li class="track-set__color-item" style="background-color: #c5181b"></li>
+        <li class="track-set__color-item" style="background-color: #fb8e31"></li>
+        <li class="track-set__color-item" style="background-color: #f5f045"></li>
+      </ul>
+    </li>
+
+    <li class="track-sett__item">
+      <label for="" class="track-sett__label">Ширина трека:</label>
+      <div class="track-sett__range-wrap">
+        <input type="range" class="track-sett__range" id="track_weight" min="1" max="20" value="6" step="1">
+        <span class="track-sett__range-val">6</span>
+      </div>
+
+    </li>
+  </ul>
+
+  <div class="track__period track-period">
+    <ul class="track-period__list">
+      <li class="track-period__item">Сегодня</li>
+      <li class="track-period__item">Вчера</li>
+      <li class="track-period__item">Неделя</li>
+      <li class="track-period__item">Месяц</li>
+    </ul>
+
+    <div class="track-period__wrap">
+      <input type="datetime-local" class="track-period__input" id="track_start">
+      <input type="datetime-local" class="track-period__input" id="track_end">
+    </div>
+  </div>
+
+  <div class="track__btns track-btns">
+    <button class="btn-reset btn track__btn track__btn--reset">Очистить</button>
+    <button class="btn-reset btn btn--submit track__btn" id="show_track">Построить трек</button>
+  </div>
+
+  <ul class="track__list track-list" id="track-list"></ul>
+</article>

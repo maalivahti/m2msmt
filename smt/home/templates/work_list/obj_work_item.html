@@ -1,0 +1,13 @@
+{% load static %}
+<li class="work-list__item obj__item">
+  <input type="checkbox" id="obj_{{ elem.id }}" class="gen-check obj-show-map"/>
+  <label for="obj_{{ elem.id }}" class="gen-label work-list__check"></label>
+
+  <img src="{% static 'dist/images/car.png' %}" alt="" class="obj-icon">
+
+  <p class="work-list__obj-name obj__name">{{ elem.name }}</p>
+
+  <div class="work-icon work-icon--more icon--more"></div>
+  <div class="work-icon work-icon--sett icon--sett"></div>
+  <div class="work-icon work-icon--remove icon--remove"></div>
+</li>

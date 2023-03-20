@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+  background-color: #284669;
+  color: #fff;
+}
+
+.header__logo {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.header__img {
+  width: 120px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__item {
+
+
+  &:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+}
+
+.nav__icon {
+  display: inline-block;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &--satellite {
+    background-image: url("../img/satellite.svg");
+  }
+  &--track {
+    background-image: url("../img/road.svg");
+  }
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: inherit;
+}

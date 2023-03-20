@@ -1,0 +1,12 @@
+@import "vendors/normalize";
+//@import "/node_modules/leaflet/dist/leaflet.css";
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.leaflet-popup-close-button {
+  display: none !important;
+}
+
